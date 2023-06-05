@@ -1,3 +1,5 @@
 from django.contrib import admin
+from orkun.models import Project
 
-# Register your models here.
+admin.site.register(Project)
+

@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orkun Za</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/images/orkunimage.png' %}">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="../../css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/line-awesome.min.css' %}">
+    <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/smooth-scrollbar.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/lightbox.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+
+</head>
+<body class="home1-page">
+
+    <video class="body-overlay" muted="" autoplay="" loop="">
+        <source src="{% static 'assets/images/video1.mp4' %}" type="video/mp4">
+    </video>
+
+    <div class="page-loader">
+        <div class="bounceball"></div>
+    </div>
+
+
+        <br><br><br>
+        <!-- project-section -->
+        <div class="blog-section pt-100 pb-70" dir="ltr">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 pb-30">
+                        <div class="blog-details desk-pad-right-40">
+                            <article>
+                                <div class="forum-details mb-30">
+                                    <div class="blog-details-category">
+                                        <img src="{{ project.image.url }}" alt="blog">
+                                    </div>
+                                    <br>
+                                    <div class="section-header">
+                                        <h1 class="scroll-animation" data-animation="fade_from_bottom"><span>{{ project.title }}</span></h1>
+                                    </div>
+                                    <p>{{ project.body|safe }}</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <br>
+
+    <a href="{% url 'orkun:home' %}" class="subtitle scroll-animation" style="position: relative; right: -120px; color: #28e98c;" data-animation="fade_from_bottom">
+        <i class="la la-angle-double-left" style="color: #28e98c;"></i> Go Back
+    </a>
+<br><br><br>
+    <script src="{% static 'assets/js/jquery.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/owl.carousel.js' %}"></script>
+    <script src="{% static 'assets/js/gsap.min.js' %}"></script>
+    <script src="{% static 'assets/js/ScrollTrigger.min.js' %}"></script>
+    <script src="{% static 'assets/js/ScrollToPlugin.min.js' %}"></script>
+    <script src="{% static 'assets/js/lightbox.min.js' %}"></script>
+
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    <script src="{% static 'assets/js/ajax-form.js' %}"></script>
+    <script src="{% static 'assets/js/color.js' %}"></script>
+</body>
+</html>
